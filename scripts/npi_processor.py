@@ -6,7 +6,7 @@ import pandas as pd
 npi_file_path = 'input/npidata_pfile_20050523-20250810.csv'
 
 #read npi files with polars because it is a larger database for pandas with small rows to see what the columns are
-df_polars = pl.read_csv(npi_file_path, n_rows=10)
+df_polars = pl.read_csv(npi_file_path, n_rows=1_000_000)
 
 #use print to see the columns
 print(df_polars.columns) 
@@ -27,4 +27,7 @@ df_polars_small = df_polars_small.rename({
     'Last_Updated' : 'Last_Updated'
 })
 
+#save as csv file
+output_file_path = 'output/csv/npi_small.csv'
 
+df_polars_small.write_csv(output_file_path)
