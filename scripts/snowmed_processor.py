@@ -48,10 +48,16 @@ df = df.rename({
     'Last_Updated' : 'Last_Updated'
 })
 
-#put output path
+#put output path, directory selects a location to drop off csv in. no need to name yt
 output_dir = Path('output/csv') 
 output_dir.mkdir(exist_ok=True)
+
+#name the full output file path
 output_path = output_dir / 'snowmed_codes_2025.csv'
 
 #convert to csv
 df.write_csv(output_path)
+
+#unable to upload csv to github because its too large, so im going to convert to parquet
+output_path = output_dir / 'snowmed_codes_2025.parquet'
+df.write_parquet(output_path)
