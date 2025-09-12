@@ -19,15 +19,5 @@ venv/
 .idea/
 
 
-inputs
-input/HCPC2025_OCT_ANWEB_v3.txt
-input/RXNATOMARCHIVE.RRF
-input/icd10cm_order_2025.txt
-input/icd102019syst_codes.txt
-input/npidata_pfile_20050523-20250810.csv
-input/sct2_Description_Full-en_US1000124_20250301.txt
-
-
-
-outputs
+#ignore snowmed_codes_2025.csv
 output/csv/snowmed_codes_2025.csv

@@ -49,6 +49,6 @@ df + df.rename({
 #put output path and save as csv
 output_dir = Path('output/csv/') #specify output path
 output_dir.mkdir(exist_ok=True) #makes sure output directoy exists
-output_path = output_dir / 'RXNATOMACHIVE.csv' #specify full output file path
+output_path = output_dir / 'RXNATOMACHIVE.csv' #name the output file 
 
 df.write_csv(output_path)
